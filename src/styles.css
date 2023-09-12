@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.app-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+.key-selector {
+    margin-bottom: 20px;
+}
+
+.fretboard {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+}
+
+.string {
+    display: flex;
+    height: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.string:last-child {
+    border-bottom: none;
+}
+
+.fret {
+    flex: 1;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.fret:last-child {
+    border-right: none;
+}
