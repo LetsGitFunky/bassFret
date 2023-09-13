@@ -1,45 +1,43 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-.app-container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
-}
-
-.key-selector {
-    margin-bottom: 20px;
-}
-
 .fretboard {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #ccc;
+    background-color: #8B4513; /* saddle brown to resemble wood */
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
 }
 
 .string {
-    display: flex;
-    height: 20px;
-    border-bottom: 1px solid #ccc;
+    height: 24px;
+    margin: 10px 0;
+    position: relative;
 }
 
-.string:last-child {
-    border-bottom: none;
+.string::before { /* this will create the line that represents the string itself */
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #EEE;
+    transform: translateY(-50%);
 }
 
 .fret {
-    flex: 1;
-    border-right: 1px solid #ccc;
+    display: inline-block;
+    width: 40px;
+    height: 100%;
     box-sizing: border-box;
+    position: relative;
+    border-right: 1px solid #AAA;
+    transition: background-color 0.3s;
 }
 
 .fret:last-child {
     border-right: none;
 }
+
+.fret:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* You can expand on these styles for additional effects, animations, or to represent other aspects of the fretboard. */
