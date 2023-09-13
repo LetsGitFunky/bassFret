@@ -40,4 +40,14 @@
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* You can expand on these styles for additional effects, animations, or to represent other aspects of the fretboard. */
+.root-note {
+    background-color: blue;
+}
+
+.triad-note {
+    background-color: green;
+}
+
+.scale-note {
+    background-color: yellow;
+}
