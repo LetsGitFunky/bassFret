@@ -9,6 +9,10 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: 'babel-loader'
+            },
+            {
+                test: /\.css$/,  // <-- This line tells webpack to use the below loaders on any .css files
+                use: ['style-loader', 'css-loader']  // <-- These loaders process and bundle your CSS files
             }
         ]
     },
