@@ -1,141 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bass Guitar Visualizer</title>
-    <!-- If you plan to use external CSS or JS libraries, link them here. -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bass Guitar Visualizer</title>
+        <!-- If you plan to use external CSS or JS libraries, link them here. -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
 
-<!-- Main container for the app -->
-<div class="app-container">
+    <!-- Main container for the app -->
+        <div class="app-container">
 
-    <!-- Dropdown for selecting musical keys -->
-    <div class="key-selector">
-        <label for="key">Select a Key:</label>
-        <select id="key">
-            <option value="C">C</option>
-            <option value="C#">C#/Db</option>
-            <option value="D">D</option>
-            <option value="D#">D#/Eb</option>
-            <option value="E">E</option>
-            <option value="F">F</option>
-            <option value="F#">F#/Gb</option>
-            <option value="G">G</option>
-            <option value="G#">G#/Ab</option>
-            <option value="A">A</option>
-            <option value="A#">A#/Bb</option>
-            <option value="B">B</option>
-        </select>
-    </div>
+            <!-- Dropdown for selecting musical keys -->
+            <div class="key-selector">
+                <label for="key">Select a Key:</label>
+                <select id="key">
+                    <option value="C">C</option>
+                    <option value="C#">C#/Db</option>
+                    <option value="D">D</option>
+                    <option value="D#">D#/Eb</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="F#">F#/Gb</option>
+                    <option value="G">G</option>
+                    <option value="G#">G#/Ab</option>
+                    <option value="A">A</option>
+                    <option value="A#">A#/Bb</option>
+                    <option value="B">B</option>
+                </select>
+            </div>
 
-    <!-- Visual representation of the bass guitar's fretboard -->
-    <div class="fretboard">
+            <div class="fretboard">
+                <div class="string" data-string="G">
+                    <div class="fret" data-fret="0" data-note="G"></div>
+                    <div class="fret" data-fret="1" data-note="G#"></div>
+                    <div class="fret" data-fret="2" data-note="A"></div>
+                    <div class="fret" data-fret="3" data-note="A#"></div>
+                    <div class="fret" data-fret="4" data-note="B"></div>
+                    <div class="fret" data-fret="5" data-note="C"></div>
+                    <div class="fret" data-fret="6" data-note="C#"></div>
+                    <div class="fret" data-fret="7" data-note="D"></div>
+                    <div class="fret" data-fret="8" data-note="D#"></div>
+                    <div class="fret" data-fret="9" data-note="E"></div>
+                    <div class="fret" data-fret="10" data-note="F"></div>
+                    <div class="fret" data-fret="11" data-note="F#"></div>
+                    <div class="fret" data-fret="12" data-note="G"></div>
+                    <div class="fret" data-fret="13" data-note="G#"></div>
+                    <div class="fret" data-fret="14" data-note="A"></div>
+                    <div class="fret" data-fret="15" data-note="A#"></div>
+                    <div class="fret" data-fret="16" data-note="B"></div>
+                    <div class="fret" data-fret="17" data-note="C"></div>
+                    <div class="fret" data-fret="18" data-note="C#"></div>
+                    <div class="fret" data-fret="19" data-note="D"></div>
+                    <div class="fret" data-fret="20" data-note="D#"></div>
+                    <div class="fret" data-fret="21" data-note="E"></div>
+                </div>
 
-        <div class="string" data-string="G">
-            <div class="fret" data-fret="0" data-note="G"></div>
-            <div class="fret" data-fret="1" data-note="G#"></div>
-            <div class="fret" data-fret="2" data-note="A"></div>
-            <div class="fret" data-fret="3" data-note="A#"></div>
-            <div class="fret" data-fret="4" data-note="B"></div>
-            <div class="fret" data-fret="5" data-note="C"></div>
-            <div class="fret" data-fret="6" data-note="C#"></div>
-            <div class="fret" data-fret="7" data-note="D"></div>
-            <div class="fret" data-fret="8" data-note="D#"></div>
-            <div class="fret" data-fret="9" data-note="E"></div>
-            <div class="fret" data-fret="10" data-note="F"></div>
-            <div class="fret" data-fret="11" data-note="F#"></div>
-            <div class="fret" data-fret="12" data-note="G"></div>
-            <div class="fret" data-fret="13" data-note="G#"></div>
-            <div class="fret" data-fret="14" data-note="A"></div>
-            <div class="fret" data-fret="15" data-note="A#"></div>
-            <div class="fret" data-fret="16" data-note="B"></div>
-            <div class="fret" data-fret="17" data-note="C"></div>
-            <div class="fret" data-fret="18" data-note="C#"></div>
-            <div class="fret" data-fret="19" data-note="D"></div>
-            <div class="fret" data-fret="20" data-note="D#"></div>
-            <div class="fret" data-fret="21" data-note="E"></div>
+                <div class="string" data-string="D">
+                    <div class="fret" data-fret="0" data-note="D"></div>
+                    <div class="fret" data-fret="1" data-note="D#"></div>
+                    <div class="fret" data-fret="2" data-note="E"></div>
+                    <div class="fret" data-fret="3" data-note="F"></div>
+                    <div class="fret" data-fret="4" data-note="F#"></div>
+                    <div class="fret" data-fret="5" data-note="G"></div>
+                    <div class="fret" data-fret="6" data-note="G#"></div>
+                    <div class="fret" data-fret="7" data-note="A"></div>
+                    <div class="fret" data-fret="8" data-note="A#"></div>
+                    <div class="fret" data-fret="9" data-note="B"></div>
+                    <div class="fret" data-fret="10" data-note="C"></div>
+                    <div class="fret" data-fret="11" data-note="C#"></div>
+                    <div class="fret" data-fret="12" data-note="D"></div>
+                    <div class="fret" data-fret="13" data-note="D#"></div>
+                    <div class="fret" data-fret="14" data-note="E"></div>
+                    <div class="fret" data-fret="15" data-note="F"></div>
+                    <div class="fret" data-fret="16" data-note="F#"></div>
+                    <div class="fret" data-fret="17" data-note="G"></div>
+                    <div class="fret" data-fret="18" data-note="G#"></div>
+                    <div class="fret" data-fret="19" data-note="A"></div>
+                    <div class="fret" data-fret="20" data-note="A#"></div>
+                    <div class="fret" data-fret="21" data-note="B"></div>
+                </div>
+
+                <div class="string" data-string="A">
+                    <div class="fret" data-fret="0" data-note="A"></div>
+                    <div class="fret" data-fret="1" data-note="A#"></div>
+                    <div class="fret" data-fret="2" data-note="B"></div>
+                    <div class="fret" data-fret="3" data-note="C"></div>
+                    <div class="fret" data-fret="4" data-note="C#"></div>
+                    <div class="fret" data-fret="5" data-note="D"></div>
+                    <div class="fret" data-fret="6" data-note="D#"></div>
+                    <div class="fret" data-fret="7" data-note="E"></div>
+                    <div class="fret" data-fret="8" data-note="F"></div>
+                    <div class="fret" data-fret="9" data-note="F#"></div>
+                    <div class="fret" data-fret="10" data-note="G"></div>
+                    <div class="fret" data-fret="11" data-note="G#"></div>
+                    <div class="fret" data-fret="12" data-note="A"></div>
+                    <div class="fret" data-fret="13" data-note="A#"></div>
+                    <div class="fret" data-fret="14" data-note="B"></div>
+                    <div class="fret" data-fret="15" data-note="C"></div>
+                    <div class="fret" data-fret="16" data-note="C#"></div>
+                    <div class="fret" data-fret="17" data-note="D"></div>
+                    <div class="fret" data-fret="18" data-note="D#"></div>
+                    <div class="fret" data-fret="19" data-note="E"></div>
+                    <div class="fret" data-fret="20" data-note="F"></div>
+                    <div class="fret" data-fret="21" data-note="F#"></div>
+                </div>
+
+                <div class="string" data-string="E">
+                    <div class="fret" data-fret="0" data-note="E"></div>
+                    <div class="fret" data-fret="1" data-note="F"></div>
+                    <div class="fret" data-fret="2" data-note="F#"></div>
+                    <div class="fret" data-fret="3" data-note="G"></div>
+                    <div class="fret" data-fret="4" data-note="G#"></div>
+                    <div class="fret" data-fret="5" data-note="A"></div>
+                    <div class="fret" data-fret="6" data-note="A#"></div>
+                    <div class="fret" data-fret="7" data-note="B"></div>
+                    <div class="fret" data-fret="8" data-note="C"></div>
+                    <div class="fret" data-fret="9" data-note="C#"></div>
+                    <div class="fret" data-fret="10" data-note="D"></div>
+                    <div class="fret" data-fret="11" data-note="D#"></div>
+                    <div class="fret" data-fret="12" data-note="E"></div>
+                    <div class="fret" data-fret="13" data-note="F"></div>
+                    <div class="fret" data-fret="14" data-note="F#"></div>
+                    <div class="fret" data-fret="15" data-note="G"></div>
+                    <div class="fret" data-fret="16" data-note="G#"></div>
+                    <div class="fret" data-fret="17" data-note="A"></div>
+                    <div class="fret" data-fret="18" data-note="A#"></div>
+                    <div class="fret" data-fret="19" data-note="B"></div>
+                    <div class="fret" data-fret="20" data-note="C"></div>
+                    <div class="fret" data-fret="21" data-note="C#"></div>
+                </div>
+            </div>
         </div>
 
-        <div class="string" data-string="D">
-            <div class="fret" data-fret="0" data-note="D"></div>
-            <div class="fret" data-fret="1" data-note="D#"></div>
-            <div class="fret" data-fret="2" data-note="E"></div>
-            <div class="fret" data-fret="3" data-note="F"></div>
-            <div class="fret" data-fret="4" data-note="F#"></div>
-            <div class="fret" data-fret="5" data-note="G"></div>
-            <div class="fret" data-fret="6" data-note="G#"></div>
-            <div class="fret" data-fret="7" data-note="A"></div>
-            <div class="fret" data-fret="8" data-note="A#"></div>
-            <div class="fret" data-fret="9" data-note="B"></div>
-            <div class="fret" data-fret="10" data-note="C"></div>
-            <div class="fret" data-fret="11" data-note="C#"></div>
-            <div class="fret" data-fret="12" data-note="D"></div>
-            <div class="fret" data-fret="13" data-note="D#"></div>
-            <div class="fret" data-fret="14" data-note="E"></div>
-            <div class="fret" data-fret="15" data-note="F"></div>
-            <div class="fret" data-fret="16" data-note="F#"></div>
-            <div class="fret" data-fret="17" data-note="G"></div>
-            <div class="fret" data-fret="18" data-note="G#"></div>
-            <div class="fret" data-fret="19" data-note="A"></div>
-            <div class="fret" data-fret="20" data-note="A#"></div>
-            <div class="fret" data-fret="21" data-note="B"></div>
-        </div>
-
-        <div class="string" data-string="A">
-            <div class="fret" data-fret="0" data-note="A"></div>
-            <div class="fret" data-fret="1" data-note="A#"></div>
-            <div class="fret" data-fret="2" data-note="B"></div>
-            <div class="fret" data-fret="3" data-note="C"></div>
-            <div class="fret" data-fret="4" data-note="C#"></div>
-            <div class="fret" data-fret="5" data-note="D"></div>
-            <div class="fret" data-fret="6" data-note="D#"></div>
-            <div class="fret" data-fret="7" data-note="E"></div>
-            <div class="fret" data-fret="8" data-note="F"></div>
-            <div class="fret" data-fret="9" data-note="F#"></div>
-            <div class="fret" data-fret="10" data-note="G"></div>
-            <div class="fret" data-fret="11" data-note="G#"></div>
-            <div class="fret" data-fret="12" data-note="A"></div>
-            <div class="fret" data-fret="13" data-note="A#"></div>
-            <div class="fret" data-fret="14" data-note="B"></div>
-            <div class="fret" data-fret="15" data-note="C"></div>
-            <div class="fret" data-fret="16" data-note="C#"></div>
-            <div class="fret" data-fret="17" data-note="D"></div>
-            <div class="fret" data-fret="18" data-note="D#"></div>
-            <div class="fret" data-fret="19" data-note="E"></div>
-            <div class="fret" data-fret="20" data-note="F"></div>
-            <div class="fret" data-fret="21" data-note="F#"></div>
-        </div>
-
-        <div class="string" data-string="E">
-            <div class="fret" data-fret="0" data-note="E"></div>
-            <div class="fret" data-fret="1" data-note="F"></div>
-            <div class="fret" data-fret="2" data-note="F#"></div>
-            <div class="fret" data-fret="3" data-note="G"></div>
-            <div class="fret" data-fret="4" data-note="G#"></div>
-            <div class="fret" data-fret="5" data-note="A"></div>
-            <div class="fret" data-fret="6" data-note="A#"></div>
-            <div class="fret" data-fret="7" data-note="B"></div>
-            <div class="fret" data-fret="8" data-note="C"></div>
-            <div class="fret" data-fret="9" data-note="C#"></div>
-            <div class="fret" data-fret="10" data-note="D"></div>
-            <div class="fret" data-fret="11" data-note="D#"></div>
-            <div class="fret" data-fret="12" data-note="E"></div>
-            <div class="fret" data-fret="13" data-note="F"></div>
-            <div class="fret" data-fret="14" data-note="F#"></div>
-            <div class="fret" data-fret="15" data-note="G"></div>
-            <div class="fret" data-fret="16" data-note="G#"></div>
-            <div class="fret" data-fret="17" data-note="A"></div>
-            <div class="fret" data-fret="18" data-note="A#"></div>
-            <div class="fret" data-fret="19" data-note="B"></div>
-            <div class="fret" data-fret="20" data-note="C"></div>
-            <div class="fret" data-fret="21" data-note="C#"></div>
-        </div>
-    </div>
-</div>
-
-<script src="main.js"></script>
-</body>
+    <script src="main.js"></script>
+    </body>
 </html>
